@@ -6,7 +6,7 @@
 /*   By: ljudd <ljudd@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 15:04:03 by ljudd             #+#    #+#             */
-/*   Updated: 2025/05/01 15:37:05 by ljudd            ###   ########.fr       */
+/*   Updated: 2025/05/01 16:21:48 by ljudd            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@
 
 typedef struct s_list_gnl
 {
-	char				*s;
+	char				*buffer;
+	int					fd;
 	struct s_list_gnl	*next;
 }	t_list_gnl;
 
