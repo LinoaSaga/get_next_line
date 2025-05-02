@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ljudd <ljudd@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/02 11:37:28 by ljudd             #+#    #+#             */
-/*   Updated: 2025/05/02 15:18:47 by ljudd            ###   ########.fr       */
+/*   Created: 2025/05/01 15:01:05 by ljudd             #+#    #+#             */
+/*   Updated: 2025/05/02 15:19:25 by ljudd            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 /* function to free if not null and return VOID*/
 /* exist just to gain some lines in other functions*/
