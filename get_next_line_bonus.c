@@ -6,7 +6,7 @@
 /*   By: ljudd <ljudd@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 15:00:37 by ljudd             #+#    #+#             */
-/*   Updated: 2025/05/02 15:19:28 by ljudd            ###   ########.fr       */
+/*   Updated: 2025/05/05 10:22:34 by ljudd            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	ft_gnl_add(char **s, t_list_gnl *fd_node)
 	size_buf = ft_gnl_buflen(fd_node);
 	tmp = (char *) malloc((size_s + size_buf + 1) * sizeof(char));
 	if (!tmp)
-		return (ft_gnl_free2(*s));
+		return (free(*s));
 	k = -1;
 	while (++k < size_s && *s)
 		tmp[k] = (*s)[k];
@@ -111,19 +111,42 @@ char	*get_next_line(int fd)
 	return (res);
 }
 
+/* read of 3 files*/
 /*int	main(int argc, char **argv)
 {
-	int		fd;
-	char	*line;
+	int		fd1;
+	char	*line1;
+	int		fd2;
+	char	*line2;
+	int		fd3;
+	char	*line3;
 
 	(void) argc;
-	fd = open(argv[1], O_RDONLY);
-	line = get_next_line(fd);
-	while (line)
+	fd1 = open(argv[1], O_RDONLY);
+	fd2 = open(argv[2], O_RDONLY);
+	fd3 = open(argv[3], O_RDONLY);
+	line1 = get_next_line(fd1);
+	line2 = get_next_line(fd2);
+	line3 = get_next_line(fd3);
+	while (line1)
 	{
-		printf("%s", line);
-		free(line);
-		line = get_next_line(fd);
+		printf("%s", line1);
+		free(line1);
+		line1 = get_next_line(fd1);
 	}
-	close (fd);
+	while (line2)
+	{
+		printf("%s", line2);
+		free(line2);
+		line2 = get_next_line(fd2);
+	}
+	while (line3)
+	{
+		printf("%s", line3);
+		free(line3);
+		line3 = get_next_line(fd3);
+	}
+	close (fd1);
+	close (fd2);
+	close (fd3);
 }*/

@@ -6,20 +6,11 @@
 /*   By: ljudd <ljudd@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 15:01:05 by ljudd             #+#    #+#             */
-/*   Updated: 2025/05/02 15:19:25 by ljudd            ###   ########.fr       */
+/*   Updated: 2025/05/05 09:19:14 by ljudd            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
-
-/* function to free if not null and return VOID*/
-/* exist just to gain some lines in other functions*/
-void	ft_gnl_free2(void *elem)
-{
-	if (elem)
-		free(elem);
-	return ;
-}
 
 /* function to create a node given the file descriptor*/
 /* free memory and return NULL in case of malloc error*/

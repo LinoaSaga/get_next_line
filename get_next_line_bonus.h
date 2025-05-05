@@ -6,7 +6,7 @@
 /*   By: ljudd <ljudd@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 15:04:03 by ljudd             #+#    #+#             */
-/*   Updated: 2025/05/02 15:22:23 by ljudd            ###   ########.fr       */
+/*   Updated: 2025/05/05 09:32:58 by ljudd            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define GET_NEXT_LINE_BONUS_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE = 100
+#  define BUFFER_SIZE 100
 # endif
 
 # include <stdlib.h>
@@ -38,7 +38,6 @@ void		ft_gnl_rm(t_list_gnl **fd_node);
 char		*get_next_line(int fd);
 
 /* get_next_line_utils_bonus.c*/
-void		ft_gnl_free2(void *elem);
 t_list_gnl	*ft_gnl_createfd(int fd);
 t_list_gnl	*ft_gnl_getfd(int fd, t_list_gnl **buffer_list);
 char		*ft_gnl_freefd(int fd, t_list_gnl **buffer_list, char *res);

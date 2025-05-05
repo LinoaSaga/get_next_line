@@ -6,7 +6,7 @@
 /*   By: ljudd <ljudd@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 11:38:02 by ljudd             #+#    #+#             */
-/*   Updated: 2025/05/02 15:19:35 by ljudd            ###   ########.fr       */
+/*   Updated: 2025/05/05 10:21:29 by ljudd            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	ft_gnl_add(char **s, t_list_gnl *fd_node)
 	size_buf = ft_gnl_buflen(fd_node);
 	tmp = (char *) malloc((size_s + size_buf + 1) * sizeof(char));
 	if (!tmp)
-		return (ft_gnl_free2(*s));
+		return (free(*s));
 	k = -1;
 	while (++k < size_s && *s)
 		tmp[k] = (*s)[k];
@@ -111,6 +111,7 @@ char	*get_next_line(int fd)
 	return (res);
 }
 
+/* read from a file*/
 /*int	main(int argc, char **argv)
 {
 	int		fd;
@@ -126,4 +127,18 @@ char	*get_next_line(int fd)
 		line = get_next_line(fd);
 	}
 	close (fd);
+}*/
+
+/* read from stdin*/
+/*int	main(void)
+{
+	char	*line;
+
+	line = get_next_line(0);
+	while (line)
+	{
+		printf("%s", line);
+		free(line);
+		line = get_next_line(0);
+	}
 }*/
