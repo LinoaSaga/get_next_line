@@ -6,7 +6,7 @@
 /*   By: ljudd <ljudd@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 15:00:37 by ljudd             #+#    #+#             */
-/*   Updated: 2025/05/05 10:22:34 by ljudd            ###   ########.fr       */
+/*   Updated: 2025/05/20 17:52:14 by ljudd            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,8 @@ char	*get_next_line(int fd)
 	}
 	ft_gnl_add(&res, fd_node);
 	ft_gnl_rm(&fd_node);
+	if (fd_node->n_read == 0)
+		return (ft_gnl_freefd(fd, &buffer_list, res));
 	return (res);
 }
 
